@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <div class="card">
+      <header>
+        <div class="title">
+          <img src="logo.png" alt="Logo" class="logo">
+          <h1>AI Image Generator</h1>
+        </div>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+      </header>
+      <textarea id="prompt" placeholder="Enter your prompt here..."></textarea>
+      <div class="controls">
+        <select id="model">
+          <option value="stabilityai/stable-diffusion-3-medium-diffusers">Stable Diffusion 3</option>
+        </select>
+        <select id="count">
+          <option value="1">1 Image</option>
+          <option value="2">2 Images</option>
+          <option value="4">4 Images</option>
+        </select>
+        <select id="aspect">
+          <option value="1:1">1:1</option>
+		  <option value="9:16">9:16</option>
+          <option value="16:9">16:9</option>
+        </select>
+        <button id="generate">✨Generate</button>
+      </div>
+      <div id="gallery" class="gallery"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
